@@ -21,6 +21,8 @@ function Login() {
     };
 
     setUser([...user, newUser]);
+    RefName.current.value=""
+    RefPassword.current.value=""
   }
   return (
     <section>
