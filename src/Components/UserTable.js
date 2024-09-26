@@ -1,36 +1,31 @@
 
-
-
-import React, { useRef, useState } from 'react'
+import Table from 'react-bootstrap/Table';
 
 function UserTable({tableData}) {
 
-     const [data,setdata]= useState()
-
-         const RefValue  =useRef()
-    
-  
-         console.log("useREf")
-
   return (
-    <section>
-     <table>
+    <Table striped bordered hover variant="dark" className='w-50 m-auto'>
+      <thead>
         <tr>
-        <th>Name</th>
-        <th>Password</th>
+          <th>Name</th>
+          <th>Password</th>
         </tr>
-
-            <tr> 
-                <td>{tableData.name}</td>
-                <td>{tableData.password}</td>
-                </tr>
+      </thead>
+      <tbody>
+       {
+    tableData.map((item)=>{
+      return(<>
+      <tr>
+        <td>{item.Name}</td>
+        <td>{item.password}</td>
+      </tr>
       
-    
-     </table>
+      </>)
+    })
+   }
+      </tbody>
+    </Table>
 
- <h1 ref={RefValue}>{tableData.name}</h1>
-<button onClick={()=>{RefValue.current.style.color="green"}}>Click</button>
-   </section>
   )
 }
 
