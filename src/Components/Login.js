@@ -22,17 +22,19 @@ function Login() {
  }
   return (
   <section>
-    <Form >
-    <Form.Group className="mb-3"  controlId="formGroupEmail">
-      <Form.Label>Name</Form.Label>
+    <Form  className="w-25 mt-5 justifyContent-center">
+    <Form.Group className="mb-3 p-2"  controlId="formGroupEmail">
+      <Form.Label className="">Name</Form.Label>
       <Form.Control type="email" placeholder="Name" ref={RefName} />
     </Form.Group>
-    <Form.Group className="mb-3 " controlId="formGroupPassword">
+    <Form.Group className="mb-3 p-2" controlId="formGroupPassword">
       <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" ref={RefPassword } />
+      <Form.Control type="pa
+      ssword" placeholder="Password" ref={RefPassword } />
     </Form.Group>
-    <Button variant="primary" onClick={submit} >
-          submit
+    <br />
+    <Button variant="success" size="lg" onClick={submit} >
+          Submit
         </Button>
   </Form>
   <main>

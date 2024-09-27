@@ -7,6 +7,8 @@ function UserTable({tableData}) {
 
      const [data,setdata]= useState()
 
+     
+
          const RefValue  =useRef()
     
   
@@ -18,13 +20,7 @@ function UserTable({tableData}) {
         <tr>
         <th>Name</th>
         <th>Password</th>
-        </tr>
-
-            <tr> 
-                <td>{tableData.name}</td>
-                <td>{tableData.password}</td>
-                </tr>
-      
+        </tr>      
     
      </table>
 
