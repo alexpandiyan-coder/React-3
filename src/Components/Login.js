@@ -7,23 +7,24 @@ import photo from '../Asset/image5.jpg'
 import { Link } from "react-router-dom";
 
 function Login() {
-  const [user, setUser] = useState([]);
 
+  const [user, setUser] = useState([]);
   const RefName = useRef();
   const RefPassword = useRef();
 
-  
   function submit(e) {
+
     e.preventDefault();
+      const newUser = {
+        Name: RefName.current.value,
+        password: RefPassword.current.value,
+      };
+  
+      setUser([...user, newUser]);
+  
+      RefName.current.value = "";
+      RefPassword.current.value = "";
 
-    const newUser = {
-      Name: RefName.current.value,
-      password: RefPassword.current.value,
-    };
-
-    setUser([...user, newUser]);
-    RefName.current.value=""
-    RefPassword.current.value=""
   }
 
   const mystyle={
