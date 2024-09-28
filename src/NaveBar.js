@@ -4,7 +4,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
-import { useNavigate,Link } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
 function NaveBar() {
  
    const navigate=  useNavigate()
