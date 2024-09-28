@@ -3,7 +3,6 @@ import Table from 'react-bootstrap/Table';
 
 function UserTable({tableData}) {
 
-
   return (
     <Table striped bordered hover variant="dark" className='w-50 m-auto'>
         <tr>
